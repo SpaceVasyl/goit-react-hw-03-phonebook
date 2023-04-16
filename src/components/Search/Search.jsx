@@ -1,3 +1,4 @@
+
 export const Search = ({addFilterToState}) => {
     return (
         <div><p>Find contact by name</p>

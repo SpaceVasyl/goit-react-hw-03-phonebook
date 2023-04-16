@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 export const Contacts = ({contactFilter, deleteContact}) => {
 
 return (
@@ -11,3 +12,13 @@ return (
 </ul></>
     )
 }
+Contacts.propTypes = {
+    contactFilter: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired
+      })
+    ).isRequired,
+    deleteContact: PropTypes.func.isRequired
+  };
